@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#info-tour {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#plateau {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    border: 4px solid #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.case {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.case.claire {
+    background-color: #f0d9b5;
+}
+
+.case.sombre {
+    background-color: #b58863;
+}
+
+.case.selectionnee {
+    background-color: #7b9a58 !important; /* Vert pour la sélection */
+}
+
+.piece {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    position: relative;
+}
+
+.piece.blanche {
+    background-color: #fff;
+    border: 2px solid #ccc;
+}
+
+.piece.noire {
+    background-color: #222;
+    border: 2px solid #000;
+}
+
+/* Indicateur pour les Dames (un cercle intérieur rouge) */
+.piece.dame::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+}
