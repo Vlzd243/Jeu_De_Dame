@@ -82,3 +82,93 @@ h1 {
     background-color: #d32f2f;
     border-radius: 50%;
 }
+
+/* Couleur pour les mouvements autorisés */
+.case.valide {
+    background-color: #90ee90 !important; /* Vert clair */
+    box-shadow: inset 0 0 0 2px #333; /* Petite bordure interne pour la faire ressortir */
+}
+
+body:has(.menu-container) {
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.menu-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 450px;
+    width: 90%;
+}
+
+.menu-container h1 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.menu-container p {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    margin-bottom: 40px; /* Bel espace avant les boutons */
+}
+
+/* Zone qui regroupe les boutons */
+.bouton-jouer {
+    display: flex;
+    flex-direction: column; /* Empile les boutons à la verticale */
+    gap: 15px; /* Espace de 15px entre JOUER et CREDITS */
+}
+
+/* Réinitialisation pour les éléments <button> */
+button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    width: 100%; /* Les boutons prennent toute la largeur de la boîte */
+}
+
+/* --- BOUTON PRINCIPAL (JOUER) --- */
+.btn-main {
+    padding: 15px 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    background-color: #27ae60;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(39, 174, 96, 0.3);
+}
+
+.btn-main:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+.btn-main:active {
+    transform: translateY(1px);
+}
+
+/* --- BOUTON SECONDAIRE (CRÉDITS) --- */
+.btn-secondary {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #34495e; /* Texte gris foncé */
+    background-color: #ecf0f1; /* Fond gris clair */
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-secondary:hover {
+    background-color: #bdc3c7; /* Devient un peu plus foncé au survol */
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    transform: translateY(1px);
+}
